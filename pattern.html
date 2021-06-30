@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title>Patterns</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="img/x-icon" href="fevicon.png"/>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<center>
+		<h1>PATTERNS</h1>
+	</center>
+	
+	<h2>Please select the Patterns below :</h2>
+	<input type="radio" id="patt1" value="1" name="pp" onchange="createp1();">
+	<label>Pattern 1</label><br>
+	<input type="radio" id="patt2" value="2" name="pp" onchange="createp2();">
+	<label>Pattern 2</label><br>
+	<input type="radio" id="patt1" value="3" name="pp" onchange="createp3();">
+	<label>Pattern 3</label><br>
+	
+	<p id="result"></p>
+	
+	
+<script>
+
+function createp1()
+{
+	var res= document.getElementById("patt1");
+	var output=  document.getElementById("result");
+	
+	var n = 5; 
+    var out = "";
+	
+    for (var i = 0; i < n; i++) 
+	{
+		if (out === "") {
+			out = "Your selected pattern is look like : <br>";
+		}
+
+		for (var j = 0; j <= i; j++) {
+        out += "*";
+      }
+      out += "<br>";
+	  
+    }
+	
+	output.innerHTML = out;
+}
+
+
+function createp2()
+{
+
+	var res= document.getElementById("patt2");
+	var output=  document.getElementById("result");
+	
+	 var n = 5; 
+     var out = "";
+    for (var i = 0; i < n; i++) 
+	{
+      if (out === "") {
+			out = "Your selected pattern is look like : <br>";
+		}
+
+      for (var k = 0; k < n - i; k++) {
+        out += "*";
+      }
+      out += "<br>";
+    }
+    output.innerHTML = out;
+}
+
+
+function createp3()
+{
+
+	var res= document.getElementById("patt3");
+	var output=  document.getElementById("result");
+	
+	var n = 4; 
+    var out = "";
+	
+    for (var i = 1; i <= n; i++) {
+      if (out === "") {
+			out = "Your selected pattern is look like : <br>";
+		}
+      for (var j = 1; j <= n-i; j++) {
+        out += " ";
+      }
+      
+      for (var k = 1; k <=i; k++) {
+        out += " ";
+        out += "*";
+        out += " ";
+      }
+      out += "<br>";
+    }
+    
+	output.innerHTML = (`<pre>${out}</pre>`);
+	
+}
+
+
+
+</script>
+	
+	
+</body>
+</html>

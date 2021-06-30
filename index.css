@@ -1,0 +1,12 @@
+body
+{
+	background-image: url("background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1
+{
+	padding-top: 80px;
+    font-size: 60px;
+}
